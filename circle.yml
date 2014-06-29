@@ -4,9 +4,8 @@ dependencies:
     - bash ./install-elixir.sh
   cache_directories:
     - otp_src_17.0
+    - elixir
 test:
-  pre:
-    - ln -s ~/circle_sample/otp_src_17.0/bin/erl ~/bin/erl
   override:
     - erl -version
     - elixir -v
