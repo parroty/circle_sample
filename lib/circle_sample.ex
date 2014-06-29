@@ -6,4 +6,8 @@ defmodule CircleSample do
   def multiply(x, y) do
     x * y
   end
+
+  def subtract(x, y) do
+    x - y
+  end
 end
