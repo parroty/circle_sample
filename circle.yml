@@ -1,0 +1,15 @@
+dependencies:
+  pre:
+    - bash ./install-otp_src_17.0.sh
+    - bash ./install-elixir.sh
+  cache_directories:
+    - otp_src_17.0
+test:
+  pre:
+    - ln -s ~/circle_sample/otp_src_17.0/bin/erl ~/bin/erl
+    - ln -s ~/circle_sample/otp_src_17.0/bin/ct_run ~/bin/ct_run
+  override:
+    - erl -version
+    - make
+  post:
+    - MIX_ENV=test mix do deps.get, test
