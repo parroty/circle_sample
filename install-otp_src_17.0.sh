@@ -13,4 +13,5 @@ if [ ! -e otp_src_17.0/bin/erl ]; then
               --disable-hipe \
               --without-javac
   make;
+  export PATH=`pwd`/bin:$PATH
 fi
