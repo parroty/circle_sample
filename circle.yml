@@ -6,6 +6,12 @@ dependencies:
     - otp_src_17.0
     - elixir
 test:
+  pre:
+    - ln -s ~/circle_sample/otp_src_17.0/bin/erl ~/bin/erl
+    - ln -s ~/circle_sample/elixir/bin/elixir ~/bin/elixir
+    - ln -s ~/circle_sample/elixir/bin/elixirc ~/bin/elixirc
+    - ln -s ~/circle_sample/elixir/bin/mix ~/bin/mix
+    - ln -s ~/circle_sample/elixir/bin/iex ~/bin/iex
   override:
     - erl -version
     - elixir -v
