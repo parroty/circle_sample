@@ -4,7 +4,7 @@ defmodule CircleSample.Mixfile do
   def project do
     [app: :circle_sample,
      version: "0.0.1",
-     elixir: "~> 0.14.1",
+     elixir: ">= 0.14.1",
      deps: deps]
   end
 
