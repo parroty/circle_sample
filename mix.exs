@@ -25,6 +25,6 @@ defmodule CircleSample.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [{:excoveralls, github: "erikreedstrom/excoveralls"}]
   end
 end
