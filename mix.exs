@@ -5,7 +5,8 @@ defmodule CircleSample.Mixfile do
     [app: :circle_sample,
      version: "0.0.1",
      elixir: ">= 0.14.1",
-     deps: deps]
+     deps: deps,
+     test_coverage: [tool: ExCoveralls]]
   end
 
   # Configuration for the OTP application
