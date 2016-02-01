@@ -4,7 +4,7 @@ defmodule CircleSample.Mixfile do
   def project do
     [app: :circle_sample,
      version: "0.0.1",
-     elixir: ">= 0.14.1",
+     elixir: ">= 1.0.0",
      deps: deps,
      test_coverage: [tool: ExCoveralls]]
   end
@@ -26,6 +26,6 @@ defmodule CircleSample.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:excoveralls, github: "erikreedstrom/excoveralls"}]
+    [{:excoveralls, "~> 0.4"}]
   end
 end
