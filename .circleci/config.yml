@@ -3,11 +3,10 @@ version: 2.1
 jobs:
   build:
     environment:
-      PATH: "$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH"
+      PATH: "/home/circleci/.asdf/bin:/home/circleci/.asdf/shims:/usr/bin:/bin:/usr/sbin:/sbin"
     machine:
       image: ubuntu-1604:202004-01
     steps:
-      - run: echo "export \"$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH\""  >> $BASH_ENV
       - restore_cache:
           keys:
             - circle_sample-asdf
