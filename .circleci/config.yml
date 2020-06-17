@@ -7,6 +7,7 @@ jobs:
     machine:
       image: ubuntu-1604:202004-01
     steps:
+      - checkout
       - restore_cache:
           keys:
             - circle_sample-asdf
