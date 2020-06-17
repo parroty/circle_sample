@@ -2,10 +2,10 @@ version: 2.1
 
 jobs:
   build:
+    environment:
+      PATH: "$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH"
     machine:
       image: ubuntu-1604:202004-01
-      environment:
-        PATH: "$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH"
     steps:
       - restore_cache:
           keys:
