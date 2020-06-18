@@ -25,7 +25,8 @@ jobs:
       - restore_cache:
           keys:
             - circle_sample-{{ .Branch }}-{{ checksum "mix.lock" }}
-      - run: yes | mix deps.get
+      - run: mix local.hex --force
+      - run: mix deps.get
       - save_cache:
           key: circle_sample-{{ .Branch }}-{{ checksum "mix.lock" }}
           paths:
