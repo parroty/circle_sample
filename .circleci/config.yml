@@ -14,7 +14,9 @@ jobs:
       - run: if ! command -v asdf; then git clone https://github.com/HashNuke/asdf.git ~/.asdf; fi
       - run: asdf plugin-add erlang https://github.com/HashNuke/asdf-erlang.git
       - run: asdf plugin-add elixir https://github.com/HashNuke/asdf-elixir.git
-      - run: asdf install
+      - run:
+          command: asdf install
+          no_output_timeout: 20m
       - run: mix local.rebar --force
       - save_cache:
           key: circle_sample-asdf
